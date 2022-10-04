@@ -44,7 +44,8 @@ const getaddress = async function(address){
 getaddress('')
 searchArrow.addEventListener('click', function(){
   const inputValue = input.value
-  getaddress(inputValue)
+  const v = String(inputValue)
+  getaddress(v)
   input.value = ''
 })  
 input.addEventListener('click', function(){
