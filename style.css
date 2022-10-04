@@ -116,9 +116,6 @@ h5{
  height: 100%;
 }
 @media screen and (max-width: 800px) {
-  body {
-    background-color: red;
-  }
   .ip-board{
     display: flex;
     flex-direction: column;
@@ -127,7 +124,7 @@ h5{
   }
   .ip-header{
     width: 100%;
-    margin-top: 2em;
+    margin-top: 5em;
   }
   p {
     font-size: medium;
