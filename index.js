@@ -9,6 +9,7 @@ const timezone = document.querySelector('.timezone')
 const isp = document.querySelector('.isp')
 const arrow = document.querySelector('.arrow')
 let map;
+let ready = false
 
 // display ip board
  const displayBoard = function(i){
@@ -31,6 +32,7 @@ L.marker([lat, lng]).addTo(map)
 // getaddress
 const getaddress = async function(address){
  try {
+  ready = true
  const res = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_QhIHHTLcND0reC4R0ZrwRwZBABbhL&ipAddress=${address}`)
  const data = await res.json()
  displayMap(data.location.lat, data.location.lng)
@@ -46,5 +48,8 @@ searchArrow.addEventListener('click', function(){
   input.value = ''
 })  
 input.addEventListener('click', function(){
-      map.remove()
+  if(ready === true){
+    map.remove()
+  }
+  ready = false
   })
