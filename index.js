@@ -38,6 +38,7 @@ const getaddress = async function(address){
  displayMap(data.location.lat, data.location.lng)
  displayBoard(data)
  } catch (err) {
+  alert('wrong ip-address refresh page')
   console.error(`check ip address well: ${err}. try again`)
  }
 }
