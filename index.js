@@ -16,7 +16,6 @@ let map;
    ipLocation.textContent = i.location.city
    timezone.textContent = i.location.timezone;
    isp.innerText = i.isp
- console.log(i)
  }
 // displaymap
 const displayMap = function(lat, lng){
@@ -44,10 +43,8 @@ getaddress('')
 searchArrow.addEventListener('click', function(){
   const inputValue = input.value
   getaddress(inputValue)
-  console.log(arrow)
   input.value = ''
 })  
 input.addEventListener('click', function(){
       map.remove()
-    console.log('yes')
   })
